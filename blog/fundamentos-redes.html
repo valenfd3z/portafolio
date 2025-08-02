@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de Redes | Marco Fernández</title>
+    
+    <!-- Preconnect y precarga de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .blog-article {
+            max-width: 800px;
+            margin: 6rem auto 0; /* Añadido margen superior para el header fijo */
+            padding: 2rem;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .blog-meta {
+            color: var(--text-color);
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-content {
+            line-height: 1.8;
+        }
+        
+        .blog-content h2 {
+            color: var(--primary-color);
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .blog-content h3 {
+            color: var(--accent-color);
+            margin: 1.5rem 0 0.8rem;
+            font-size: 1.4rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.2rem;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .back-to-blog {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-to-blog:hover {
+            text-decoration: underline;
+        }
+        
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 2rem 0;
+        }
+        
+        .blog-tag {
+            background-color: var(--card-bg);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--radius-full);
+            font-size: 0.9rem;
+            border: 1px solid var(--primary-color);
+        }
+        
+        .download-pdf {
+            margin: 1.5rem 0;
+        }
+        
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-download:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-download i {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <!-- Botón de volver arriba -->
+    <a href="#" id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Botón de tema -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navegación -->
+    <nav id="navbar" aria-label="Navegación principal">
+        <div class="container">
+            <div class="nav-links">
+                <a href="../index.html">
+                    <i class="fas fa-home nav-icon"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="../index.html#skills">
+                    <i class="fas fa-code nav-icon"></i>
+                    <span>Habilidades</span>
+                </a>
+                <a href="../index.html#projects">
+                    <i class="fas fa-project-diagram nav-icon"></i>
+                    <span>Proyectos</span>
+                </a>
+                <a href="../index.html#blog" class="active" aria-current="page">
+                    <i class="fas fa-blog nav-icon"></i>
+                    <span>Blog</span>
+                </a>
+                <a href="../index.html#contact" class="contact-btn">
+                    <i class="fas fa-paper-plane nav-icon"></i>
+                    <span>Contacto</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Artículo del Blog -->
+    <main class="blog-article" id="blog-comunicacion-redes2">
+        <header class="blog-header">
+            <h1 class="blog-title">Fundamentos de Redes</h1>
+            <p class="blog-meta">Publicado el 31 de julio de 2025 | Por Marco Valentín Fernández</p>
+            <div class="blog-tags">
+                <span class="blog-tag">Redes</span>
+                <span class="blog-tag">Tecnología</span>
+                <span class="blog-tag">Educación</span>
+            </div>
+            <div class="download-pdf">
+                <a href="../pdf/RESUMEN%20FINAL%20REDES%202.pdf" class="btn-download" download="Resumen_Comunicacion_Redes2.pdf">
+                    <i class="fas fa-file-pdf"></i> Descargar Resumen en PDF
+                </a>
+            </div>
+        </header>
+        
+        <article class="blog-content">
+            <p>En este artículo, exploraremos los conceptos fundamentales de las redes de computadoras, un pilar esencial en el mundo de la tecnología de la información y las comunicaciones modernas.</p>
+            
+            <h2>1. Introducción a las Redes de Computadoras</h2>
+            <p>Las redes de computadoras son sistemas de comunicación que permiten el intercambio de información entre dispositivos. Los conceptos clave incluyen:</p>
+            <ul>
+                <li><strong>Topologías de red</strong>: Estrella, anillo, malla, bus y sus variantes.</li>
+                <li><strong>Modelo OSI</strong>: Las 7 capas que definen cómo se comunican los sistemas en una red.</li>
+                <li><strong>Modelo TCP/IP</strong>: El modelo de referencia en el que se basa Internet actual.</li>
+            </ul>
+            
+            <h2>2. Protocolos de Comunicación</h2>
+            <p>Los protocolos son reglas que permiten la comunicación entre dispositivos. Algunos de los más importantes son:</p>
+            
+            <h3>2.1. Protocolos de Capa de Red</h3>
+            <ul>
+                <li><strong>IP (Internet Protocol)</strong>: Encargado del direccionamiento lógico y enrutamiento de paquetes.</li>
+                <li><strong>ICMP</strong>: Usado para enviar mensajes de error y operativos.</li>
+                <li><strong>ARP/RARP</strong>: Para la resolución de direcciones IP a direcciones MAC y viceversa.</li>
+            </ul>
+            
+            <h3>2.2. Protocolos de Transporte</h3>
+            <ul>
+                <li><strong>TCP</strong>: Orientado a conexión, proporciona comunicación confiable.</li>
+                <li><strong>UDP</strong>: Sin conexión, más rápido pero menos confiable, ideal para streaming y juegos.</li>
+            </ul>
+            
+            <h2>3. Dispositivos de Red</h2>
+            <p>Conocimos los diferentes dispositivos que componen una red y sus funciones:</p>
+            <ul>
+                <li><strong>Hubs</strong>: Conectan múltiples dispositivos en una red local.</li>
+                <li><strong>Switches</strong>: Dispositivos más inteligentes que los hubs, dirigen el tráfico a los puertos correctos.</li>
+                <li><strong>Routers</strong>: Conectan redes diferentes y enrutan paquetes entre ellas.</li>
+                <li><strong>Firewalls</strong>: Protegen las redes filtrando el tráfico no deseado.</li>
+            </ul>
+            
+            <h2>4. Redes Inalámbricas</h2>
+            <p>También exploramos las redes inalámbricas, incluyendo:</p>
+            <ul>
+                <li>Estándares Wi-Fi (802.11a/b/g/n/ac/ax).</li>
+                <li>Seguridad en redes inalámbricas (WEP, WPA, WPA2, WPA3).</li>
+                <li>Configuración de puntos de acceso inalámbricos.</li>
+            </ul>
+            
+            <h2>Conclusión</h2>
+            <p>La materia Comunicación y Redes 2 ha sido fundamental para comprender cómo funcionan las redes de computadoras en la actualidad. Los conocimientos adquiridos son la base para áreas como la ciberseguridad, la administración de redes y el desarrollo de aplicaciones en red.</p>
+            
+            <p>Si estás interesado en profundizar en algún tema específico o tienes preguntas, ¡no dudes en contactarme a través de la sección de contacto de mi portafolio!</p>
+            
+            <a href="../index.html#blog" class="back-to-blog">
+                <i class="fas fa-arrow-left"></i> Volver al blog
+            </a>
+        </article>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script>
+        // Script para el botón de tema
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // Verificar tema guardado o preferencia del sistema
+        const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+        
+        // Cambiar tema al hacer clic
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            const isDark = document.body.classList.contains('dark-theme');
+            themeIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+        
+        // Botón de volver arriba
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+        
+        // Smooth scroll para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

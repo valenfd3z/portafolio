@@ -1,0 +1,24 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de entorno
+.env
+.env.local
+
+# Dependencias
+node_modules/
+__pycache__/
+*.pyc
+
+# Archivos de IDE
+.vscode/
+.idea/
+
+# Archivos generados
+*.log
+*.tmp
+
+# Archivos personales
+*.pdf
+!assets/cv.pdf  # Incluimos explícitamente el CV en assets
